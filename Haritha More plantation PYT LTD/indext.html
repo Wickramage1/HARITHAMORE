@@ -2,17 +2,18 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+
+<!-- FAVICON -->
 <link rel="icon" type="image/png" href="haritha-plant-logo.png">
 
-<title>Haritha More Plantation (Pvt) Ltd</title>
+<title>Haritha More Plantation (PVT) LTD</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-
+<!-- FONT -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-
-
+/* ================= VARIABLES ================= */
 :root{
   --green-dark:#1B5E20;
   --green-main:#2E7D32;
@@ -22,7 +23,7 @@
   --white:#FFFFFF;
 }
 
-
+/* ================= RESET ================= */
 *{
   margin:0;
   padding:0;
@@ -33,15 +34,11 @@
 body{
   background:#F9FFF9;
   color:var(--text-dark);
-  scroll-behavior:smooth;
 }
 
-a{
-  text-decoration:none;
-  color:inherit;
-}
+a{text-decoration:none;color:inherit}
 
-
+/* ================= NAVBAR ================= */
 nav{
   position:fixed;
   top:0;
@@ -55,12 +52,10 @@ nav{
   z-index:1000;
 }
 
-nav .logo{
+.logo{
   font-size:1.6rem;
   font-weight:700;
   color:var(--green-dark);
-  position: left;
-
 }
 
 nav ul{
@@ -68,70 +63,49 @@ nav ul{
   gap:22px;
 }
 
-nav ul li{
-  list-style:none;
-}
+nav ul li{list-style:none}
+nav ul li a:hover{color:var(--green-main)}
 
-nav ul li a{
-  font-weight:500;
-}
-
-nav ul li a:hover{
-  color:var(--green-main);
-}
-
-
+/* ================= HERO ================= */
 header{
-  height:90vh;
- background: linear-gradient(rgba(0,60,0,0.6), rgba(0,60,0,0.6)),
-      url("https://images.unsplash.com/photo-1501004318641-b39e6451bec6");
+  height:100vh;
+  background:
+    linear-gradient(rgba(0,60,0,.6), rgba(0,60,0,.6)),
+    url("https://images.unsplash.com/photo-1501004318641-b39e6451bec6");
   background-size:cover;
   background-position:center;
   display:flex;
   align-items:center;
   justify-content:center;
   text-align:center;
-  color:var(--white);
-  padding-top:60px;
+  padding:0 15px;
+  color:white;
 }
 
 header h1{
-  white-space: nowrap;
-  font-size: 3rem;   /* Desktop */
-  font-weight: 700;
+  white-space:nowrap;
+  font-size:clamp(1.6rem,5vw,3rem);
+  font-weight:700;
 }
-
-@media (max-width: 768px){
-  header h1{
-    font-size: 2rem;   /* Tablet / Phone */
-  }
-}
-
-@media (max-width: 480px){
-  header h1{
-    font-size: 1.6rem; /* Small phones */
-  }
-}
-
 
 header p{
   margin-top:12px;
-  font-size:1.2rem;
+  font-size:clamp(0.9rem,3vw,1.2rem);
 }
 
-
+/* ================= SECTIONS ================= */
 section{
   padding:70px 8%;
 }
 
 .section-title{
   text-align:center;
-  font-size:2.2rem;
+  font-size:clamp(1.6rem,4vw,2.2rem);
   margin-bottom:40px;
   color:var(--green-dark);
 }
 
-
+/* ================= ABOUT ================= */
 #about{
   background:var(--green-light);
   border-radius:20px;
@@ -141,11 +115,10 @@ section{
   max-width:900px;
   margin:auto;
   text-align:center;
-  font-size:1.1rem;
   line-height:1.8;
 }
 
-
+/* ================= SERVICES ================= */
 .services{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
@@ -153,36 +126,32 @@ section{
 }
 
 .service-box{
-  background:var(--white);
+  background:white;
   padding:25px;
   border-radius:16px;
   text-align:center;
   border-top:5px solid var(--green-accent);
-  box-shadow:0 8px 20px rgba(0,0,0,0.08);
-  transition:0.4s;
+  box-shadow:0 8px 20px rgba(0,0,0,.08);
+  transition:.4s;
 }
 
-.service-box:hover{
-  transform:translateY(-6px);
-}
+.service-box:hover{transform:translateY(-6px)}
 
 .service-box img{
-  width:150px;
+  width:140px;
+  height:140px;
+  object-fit:cover;
+  border-radius:50%;
   margin-bottom:15px;
-  border-radius: 15%;
 }
 
-.service-box h3{
-  color:var(--green-main);
-}
-
-
+/* ================= GALLERY ================= */
 .gallery-container{
   position:relative;
   height:380px;
   border-radius:18px;
   overflow:hidden;
-  box-shadow:0 10px 25px rgba(0,0,0,0.12);
+  box-shadow:0 10px 25px rgba(0,0,0,.12);
 }
 
 .gallery-container img{
@@ -194,9 +163,7 @@ section{
   transition:1s;
 }
 
-.gallery-container img.active{
-  opacity:1;
-}
+.gallery-container img.active{opacity:1}
 
 .controls{
   position:absolute;
@@ -209,29 +176,25 @@ section{
 
 .controls span{
   cursor:pointer;
-  font-size:1.8rem;
-  padding:10px 18px;
-  background:rgba(27,94,32,0.7);
+  font-size:1.6rem;
+  padding:10px 16px;
+  background:rgba(27,94,32,.7);
   color:white;
   border-radius:50%;
   margin:0 15px;
 }
 
-.controls span:hover{
-  background:var(--green-dark);
-}
-
-
+/* ================= BRANCHES ================= */
 .branch-box{
-  background:var(--white);
+  background:white;
   padding:22px;
   margin-bottom:20px;
   border-radius:16px;
   border-left:6px solid var(--green-accent);
-  box-shadow:0 6px 16px rgba(0,0,0,0.08);
+  box-shadow:0 6px 16px rgba(0,0,0,.08);
 }
 
-
+/* ================= CONTACT ================= */
 #contact{
   background:var(--green-light);
   border-radius:20px;
@@ -239,60 +202,42 @@ section{
 
 .contact-card{
   max-width:700px;
-  margin:0 auto;
-  background:var(--white);
+  margin:auto;
+  background:white;
   border-radius:18px;
   padding:30px;
-  box-shadow:0 8px 20px rgba(0,0,0,0.08);
+  box-shadow:0 8px 20px rgba(0,0,0,.08);
 }
 
 .contact-item{
   display:flex;
-  align-items:center;
-  gap:18px;
+  gap:15px;
   padding:15px 0;
   border-bottom:1px solid #e0e0e0;
 }
 
-.contact-item:last-child{
-  border-bottom:none;
-}
+.contact-item:last-child{border-bottom:none}
 
-.contact-item span{
-  font-size:2rem;
-}
-
-.contact-item p{
-  margin:0;
-  font-size:1.05rem;
-  line-height:1.5;
-}
-
-.contact-item strong{
-  color:var(--green-main);
-}
-
-
-
+/* ================= FOOTER ================= */
 footer{
   background:var(--green-dark);
   color:white;
   text-align:center;
   padding:20px;
-  margin-top:40px;
 }
 
-
+/* ================= MOBILE ================= */
 @media(max-width:768px){
-  header h1{font-size:2.3rem;}
-  nav ul{display:none;}
+  nav{justify-content:center}
+  nav ul{display:none}
+  section{padding:60px 6%}
 }
-
 </style>
 </head>
 
 <body>
 
+<!-- NAV -->
 <nav>
   <div class="logo">🌿 Haritha More Plantation</div>
   <ul>
@@ -304,24 +249,24 @@ footer{
   </ul>
 </nav>
 
-
+<!-- HERO -->
 <header>
   <div>
-    <h1>Haritha More Plantation PYT LTD</h1>
+    <h1>Haritha More Plantation (PVT) LTD</h1>
     <p>Nature Friendly • Sustainable • Trusted Since 2022</p>
   </div>
 </header>
 
-
+<!-- ABOUT -->
 <section id="about">
   <h2 class="section-title">About Us</h2>
   <p>
-    Haritha More Plantation (Pvt) Ltd is a registered (PV NO. 00263479) plantation company in Sri Lanka.
-    We provide quality plants and eco-friendly plantation solutions
-    across the island.
+    Haritha More Plantation (Pvt) Ltd is a registered plantation company in Sri Lanka.
+    We provide quality plants and eco-friendly plantation solutions across the island.
   </p>
 </section>
 
+<!-- SERVICES -->
 <section id="services">
   <h2 class="section-title">Our Services</h2>
   <div class="services">
@@ -330,18 +275,17 @@ footer{
       <h3>Quality Plants</h3>
     </div>
     <div class="service-box">
-      <img src="000000452..jpg">
+      <img src="000000452.jpg">
       <h3>Sandalwood Cultivation</h3>
     </div>
     <div class="service-box">
       <img src="3467446.jpg">
       <h3>Plant Consultancy</h3>
     </div>
-    
   </div>
 </section>
 
-
+<!-- GALLERY -->
 <section id="gallery">
   <h2 class="section-title">Our Plant Gallery</h2>
   <div class="gallery-container">
@@ -355,88 +299,46 @@ footer{
   </div>
 </section>
 
-
+<!-- BRANCHES -->
 <section id="branches">
   <h2 class="section-title">Our Branches</h2>
-
   <div class="branch-box">
     <h3>Head Office – Warakapola</h3>
-    <p>No 09, 1st Floor, Udumiththa Building, Kandy Road</p>
-    <p>📞 035 728 6662</p>
-  </div>
-
-  <div class="branch-box">
-    <h3>Anuradhapura Branch</h3>
-    <p>Thalawa, Little Hall Building, Kurunegala Road</p>
-    <p>📞 025 417 4477</p>
-  </div>
-
-  <div class="branch-box">
-    <h3>New Branches – Coming Soon</h3>
-    <p>Udawalawa • Kuliyapitiya • Dabulla • Ampara</p>
+    <p>No 09, Udumiththa Building, Kandy Road</p>
   </div>
 </section>
 
-
+<!-- CONTACT -->
 <section id="contact">
   <h2 class="section-title">Contact Us</h2>
-
   <div class="contact-card">
-    <div class="contact-item">
-      <span>📱</span>
-      <p><strong>WhatsApp</strong><br>076 118 4495</p>
-    </div>
-
-    <div class="contact-item">
-      <span>📘</span>
-      <p><strong>Facebook</strong><br>
-      Haritha More Plantation Official (Pvt) Ltd</p>
-    </div>
-
-    <div class="contact-item">
-      <span>📧</span>
-      <p><strong>Email</strong><br>
-      harithamoreplantationofficial@gmail.com</p>
-    </div>
+    <div class="contact-item">📱 076 118 4495</div>
+    <div class="contact-item">📘 Haritha More Plantation Official</div>
+    <div class="contact-item">📧 harithamoreplantationofficial@gmail.com</div>
   </div>
 </section>
 
-
 <footer>
-  © 2025 Haritha More Plantation (Pvt) Ltd
+  © 2025 Haritha More Plantation (PVT) LTD
 </footer>
 
 <script>
-const slides = document.querySelectorAll(".gallery-container img");
-let index = 0;
-
+const slides=document.querySelectorAll(".gallery-container img");
+let index=0;
 function showSlide(i){
   slides.forEach(s=>s.classList.remove("active"));
   slides[i].classList.add("active");
 }
-
 document.querySelector(".next").onclick=()=>{
-  index=(index+1)%slides.length;
-  showSlide(index);
+  index=(index+1)%slides.length;showSlide(index);
 };
-
 document.querySelector(".prev").onclick=()=>{
-  index=(index-1+slides.length)%slides.length;
-  showSlide(index);
+  index=(index-1+slides.length)%slides.length;showSlide(index);
 };
-
 setInterval(()=>{
-  index=(index+1)%slides.length;
-  showSlide(index);
+  index=(index+1)%slides.length;showSlide(index);
 },4000);
 </script>
+
 </body>
 </html>
-
-
-
-
-
-
-
-
