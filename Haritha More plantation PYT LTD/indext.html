@@ -98,12 +98,58 @@ header{
   padding:0 15px;
   color:white;
 }
-
-header h1{
-  white-space:nowrap;
-  font-size:clamp(1.6rem,5vw,3rem);
-  font-weight:700;
+header {
+  height: 100vh;
+  background:
+    linear-gradient(rgba(0,60,0,.6), rgba(0,60,0,.6)),
+    url("https://images.unsplash.com/photo-1501004318641-b39e6451bec6");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 15px;
+  color: white;
+  box-sizing: border-box;
 }
+
+header h1 {
+  white-space: normal; /* nowrap වෙනවානම් text overflow වෙනවා. */
+  font-size: clamp(1.6rem, 5vw, 3rem);
+  font-weight: 700;
+}
+
+header p {
+  margin-top: 12px;
+  font-size: clamp(0.9rem, 3vw, 1.2rem);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  header {
+    padding: 0 10px;
+  }
+
+  header h1 {
+    font-size: clamp(1.4rem, 6vw, 2.2rem);
+  }
+
+  header p {
+    font-size: clamp(0.8rem, 4vw, 1rem);
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: clamp(1.2rem, 7vw, 1.8rem);
+  }
+
+  header p {
+    font-size: clamp(0.7rem, 5vw, 0.9rem);
+  }
+}
+
 
 header p{
   margin-top:12px;
@@ -425,6 +471,7 @@ setInterval(()=>{
 
 </body>
 </html>
+
 
 
 
