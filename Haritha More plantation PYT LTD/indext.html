@@ -13,6 +13,21 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
+  nav .logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-size:1.6rem;
+  font-weight:700;
+  color:var(--green-dark);
+}
+
+nav .logo img{
+  width:38px;
+  height:38px;
+  object-fit:contain;
+}
+
 /* ================= VARIABLES ================= */
 :root{
   --green-dark:#1B5E20;
@@ -239,7 +254,11 @@ footer{
 
 <!-- NAV -->
 <nav>
-  <div class="logo">🌿 Haritha More Plantation</div>
+ <div class="logo">
+  <img src="haritha-logo.png" alt="Haritha More Logo">
+  <span>Haritha More Plantation</span>
+</div>
+
   <ul>
     <li><a href="#about">About</a></li>
     <li><a href="#services">Services</a></li>
@@ -355,6 +374,7 @@ setInterval(()=>{
 
 </body>
 </html>
+
 
 
 
