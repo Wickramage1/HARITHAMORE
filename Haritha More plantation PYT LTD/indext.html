@@ -264,6 +264,39 @@ footer{
     display:none;
   }
 }
+  /* Mobile screens */
+@media (max-width: 768px){
+  nav {
+    justify-content: center;
+  }
+
+  nav .logo {
+    font-size: 1.3rem;
+    gap: 5px; /* logo image සහ text අතර gap reduce කරලා */
+  }
+
+  nav .logo img {
+    width: 32px;   /* small screen වල image size reduce කරලා */
+    height: 32px;
+  }
+
+  nav ul {
+    display: none; /* menu hide */
+  }
+}
+
+@media (max-width: 480px){
+  nav .logo span {
+    display: inline; /* text එකත් දැක්කා යුතුයි */
+    font-size: 1rem;
+  }
+
+  nav .logo img {
+    width: 28px;
+    height: 28px;
+  }
+}
+
 
 </style>
 </head>
@@ -392,6 +425,7 @@ setInterval(()=>{
 
 </body>
 </html>
+
 
 
 
