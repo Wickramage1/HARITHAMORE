@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="haritha plant logo.jpg">
+<title>Haritha More Plantation (Pvt) Ltd</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --green-dark:#1B5E20;
+  --green-main:#2E7D32;
+  --green-light:#E8F5E9;
+  --green-accent:#66BB6A;
+  --text-dark:#1F2937;
+  --white:#FFFFFF;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  background:#F9FFF9;
+  color:var(--text-dark);
+}
+
+/* NAV */
+nav{
+  background:var(--white);
+  padding:14px 8%;
+  border-bottom:2px solid var(--green-light);
+}
+
+nav a{
+  text-decoration:none;
+  font-weight:600;
+  color:var(--green-dark);
+}
+
+/* HERO */
+header{
+  height:65vh;
+  background:
+    linear-gradient(rgba(0,60,0,0.6), rgba(0,60,0,0.6)),
+    url("https://images.unsplash.com/photo-1621619856624-42fd193a0661");
+  background-size:cover;
+  background-position:center;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:white;
+  padding:20px;
+}
+
+header h1{
+  font-size:clamp(1.8rem, 5vw, 3rem);
+}
+
+header p{
+  margin-top:10px;
+  font-size:1.1rem;
+}
+
+/* SECTION */
+section{
+  padding:70px 8%;
+}
+
+.section-title{
+  text-align:center;
+  font-size:2.2rem;
+  margin-bottom:40px;
+  color:var(--green-dark);
+}
+
+/* CONTENT BOX */
+.content-box{
+  max-width:900px;
+  margin:auto;
+  background:var(--white);
+  padding:35px;
+  border-radius:18px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+.content-box p{
+  line-height:1.8;
+  margin-bottom:18px;
+  font-size:1.05rem;
+}
+
+/* ===== GALLERY (REPLACED FEATURES) ===== */
+
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:22px;
+  margin-top:40px;
+}
+
+.gallery-card{
+  background:var(--green-light);
+  border-radius:16px;
+  overflow:hidden;
+  box-shadow:0 6px 16px rgba(0,0,0,0.08);
+  transition:.4s;
+}
+
+.gallery-card:hover{
+  transform:translateY(-6px);
+}
+
+.gallery-card img{
+  width:100%;
+  height:160px;
+  object-fit:cover;
+}
+
+.gallery-info{
+  padding:14px;
+}
+
+.gallery-info h3{
+  color:var(--green-main);
+  font-size:1rem;
+  margin-bottom:6px;
+}
+
+.gallery-info p{
+  font-size:.9rem;
+  line-height:1.4;
+}
+
+/* CTA */
+.cta{
+  background:linear-gradient(135deg, #2E7D32, #66BB6A);
+  color:white;
+  text-align:center;
+  padding:40px 20px;
+  border-radius:18px;
+  margin-top:60px;
+}
+
+.cta a{
+  display:inline-block;
+  margin-top:18px;
+  background:white;
+  color:var(--green-dark);
+  padding:12px 26px;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:600;
+}
+
+/* FOOTER */
+footer{
+  background:var(--green-dark);
+  color:white;
+  text-align:center;
+  padding:20px;
+  margin-top:60px;
+}
+
+@media(max-width:600px){
+  section{
+    padding:50px 6%;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <a href="index.html">← Back to Home</a>
+</nav>
+
+<header>
+  <div>
+    <h1>Sandalwood tree and plant</h1>
+    <p>High-value • Long-term • Sustainable Investment</p>
+  </div>
+</header>
+
+<section>
+  <h2 class="section-title">About Sandalwood tree and plant</h2>
+
+  <div class="content-box">
+    <p>
+      Sandalwood is one of the most valuable and rare tree species in the world.
+      At <strong>Haritha More Plantation (Pvt) Ltd</strong>, we provide expert guidance,
+      quality sandalwood plants, and long-term cultivation support.
+    </p>
+
+    <p>
+      Sandalwood cultivation is a profitable and sustainable agricultural investment.
+      With proper care and management, sandalwood trees can generate high returns
+      while contributing to environmental conservation.
+    </p>
+
+    <!-- 🔁 FEATURES REMOVED → GALLERY ADDED -->
+    <div class="gallery-grid">
+
+      <div class="gallery-card">
+        <img src="fffg.jpg">
+        <div class="gallery-info">
+          <h3>Sandalwood Plants</h3>
+          <p>Healthy and well-maintained plants</p>
+        </div>
+      </div>
+<div class="gallery-card">
+        <img src="6.3.jpg">
+        <div class="gallery-info">
+          <h3>Experts Guide</h3>
+          <p>Our experts provide timely advice and guidance.</p>
+        </div>
+      </div>
+     
+
+      <div class="gallery-card">
+        <img src="Photo from 💙Gihan Wickramage💙 (7).jpg">
+        <div class="gallery-info">
+          <h3>A long-term Investment</h3>
+          <p>Your investment will grow over time as the plant grows.</p>
+        </div>
+      </div>
+
+      <div class="gallery-card">
+        <img src="Photo from 💙Gihan Wickramage💙 (20).jpg">
+        <div class="gallery-info">
+          <h3>Plantation Land</h3>
+          <p>special plant for you in our land</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="cta">
+    <h2>Interested in Sandalwood Cultivation?</h2>
+    <p>Contact us today for consultation and plant availability</p>
+    <a href="tel:+94761184495">Call Now</a>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 Haritha More Plantation (PVT) LTD</p>
+
+  <div class="footer-dev">
+    Developed by
+    <strong>Gihan Wickramage</strong> (📞 076 229 9870) &
+    <strong>Thilanka Nimesh</strong>
+  </div>
+</footer>
+
+</body>
+</html>
+
+
+
+
+
+
